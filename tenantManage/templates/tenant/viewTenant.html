@@ -1,0 +1,74 @@
+<div id="tenant-detail-dialog" style="display:none">
+<form id="view-tenant-form" method="post" class="mws-form">
+    {% csrf_token %}
+    
+            <div class="mws-form-row">
+                <label class="mws-form-label">姓名</label>
+                <div class="mws-form-item large">
+                    <input type="text" id='viewname' name='viewname' style="width:120px;" readonly="true"/>
+                </div>
+            </div>
+            
+            <div class="mws-form-row">
+                <label class="mws-form-label">性别</label>
+                <div class="mws-form-item large">
+                    <div id='viewsex'>
+                        <input type="radio" id='viewsex0' name='viewsex' value='0'/><label for='viewsex0' disable='true' id='labelsex0'>男</label>
+                        <input type="radio" id='viewsex1' name='viewsex' value='1'/><label for='viewsex1' disable='true' id='labelsex1'>女</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mws-form-row">
+                <label class="mws-form-label">手机号码</label>
+                <div class="mws-form-item large">
+                    <input type="text" id='viewMobileNumber' name='viewMobileNumber' style="width:120px;" readonly="true"/>
+                </div>
+            </div>
+            
+            <div class="mws-form-row">
+                <label class="mws-form-label">小区</label>
+                <div class="mws-form-item large">
+                     <input type="text" id='viewCommunity' name='viewCommunity' style="width:250px;" readonly="true"/>
+                </div>
+            </div>
+            
+           <div class="mws-form-row">
+                <label class="mws-form-label">单元</label>
+                <div class="mws-form-item large">
+                    <input type="text" id='viewUnit' name='viewUnit' style="width:250px;" readonly="true"/>
+                </div>
+            </div>
+            
+            <div class="mws-form-row">
+                <label class="mws-form-label">房号</label>
+                <div class="mws-form-item large">
+                     <input type="text" id='viewHouseNumber' name='viewHouseNumber' style="width:250px;" readonly="true"/>
+                </div>
+            </div>
+            
+            <div class="mws-form-row">
+                <label class="mws-form-label">租金</label>
+                <div class="mws-form-item large">
+                    <input type="text" id='viewRentMoney' name='viewRentMoney' style="width:120px;" readonly="true"/>
+                </div>
+            </div>
+            
+            <div class="mws-form-row">
+                <label class="mws-form-label">入住日期</label>
+                <div class="mws-form-item large">
+                    <input type="text" name='viewRentDate' id='viewRentDate' style="width:120px;"  class="mws-datepicker" readonly="true"/>
+                </div>
+            </div>
+            
+            <div class="mws-form-row">
+                <label class="mws-form-label">提醒日期</label>
+                <div class="mws-form-item large">
+                    <input type="text" id='viewRemindDate' name='viewRemindDate' style="width:120px;"   class="mws-datepicker" readonly="true"/>
+                </div>
+            </div>
+            
+            
+        </div>
+    </form>
+</div>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--><html lang="en"><!--<![endif]-->
+
+{% include "include.html" %}
+{% block extrastyle %}
+    <link rel="stylesheet" type="text/css" href="/static/plugins/datatables/extra/TableTools.css" media="screen"/>
+{% endblock %}
+<body>
+
+    {% include "header.html" %}
+    <!-- Start Main Wrapper -->
+    <div id="mws-wrapper">
+    
+        {% include "leftmenu.html" %}
+        <!-- Main Container Start -->
+        <div id="mws-container" class="clearfix">
+            <br/>
+            <!-- Inner Container Start -->
+            <div class="container">
+            {% if form.name.errors or form.sex.errors  or form.mobileNumber.errors  or form.community.errors  or form.unit.errors  or form.houseNumber.errors  or form.rentMoney.errors  or form.rentDate.errors  or form.remindDate.errors %}
+                    <div class="mws-form-message error" >
+                        {% if form.name.errors %}
+                            {{ form.name.errors }}
+                        {% endif %}
+                        {% if form.sex.errors %}
+                            {{ form.sex.errors }}
+                        {% endif %}
+                         {% if form.mobileNumber.errors %}
+                            {{ form.mobileNumber.errors }}
+                        {% endif %}
+                         {% if form.community.errors %}
+                            {{ form.community.errors }}
+                        {% endif %}
+                         {% if form.unit.errors %}
+                            {{ form.unit.errors }}
+                        {% endif %}
+                         {% if form.houseNumber.errors %}
+                            {{ form.houseNumber.errors }}
+                        {% endif %}
+                          {% if form.rentMoney.errors %}
+                            {{ form.rentMoney.errors }}
+                        {% endif %}
+                          {% if form.rentDate.errors %}
+                            {{ form.rentDate.errors }}
+                        {% endif %}
+                         {% if form.remindDate.errors %}
+                            {{ form.remindDate.errors }}
+                        {% endif %}
+                    </div>
+                {% endif %}
+                {% if success %}
+                    <div id='success' class="mws-form-message success">
+                        您已经{{successinfo}}成功!
+                    </div>
+                {% endif %}
+                <div class="mws-panel grid_8" style="margin-bottom:0px">
+                    <div class="mws-panel-header">
+                        <span><i class="icon-magic"></i>租客管理</span>
+                    </div>
+                    <div class="mws-panel-body no-padding">
+
+                        <table class="mws-datatable-fn mws-table" name="tenants" id="tenants" style="text-align:center;">
+                            <thead>
+                                <tr>
+                                     <th>编号</th>
+                                     <th>姓名</th>
+                                     <th>性别</th>
+                                     <th>手机号码</th>
+                                     <th>房号</th>
+                                     <th>出租日期</th>
+                                     <th>提醒日期</th>
+                                     <th>租金</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+
+            {% include "tenant/viewTenant.html" %}
+            {% include "tenant/addTenant.html" %}
+            {% include "tenant/editTenant.html" %}
+            {% include "tenant/deleteTenant.html" %}
+            {% include "tenant/select.html" %}
+
+                <!-- Panels End -->
+            </div>
+            <!-- Inner Container End -->
+         
+            
+        </div>
+        <!-- Main Container End -->
+        
+    </div>
+    
+    {% include "footer.html" %}
+    <script type="text/javascript" src="/static/plugins/datatables/extra/TableTools.js"></script>
+    <script type="text/javascript" src="/static/plugins/datatables/extra/ZeroClipboard.js"></script>
+</body>
+</html>

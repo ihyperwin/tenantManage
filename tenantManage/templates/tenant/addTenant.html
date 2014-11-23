@@ -1,0 +1,92 @@
+<div id="add-tenant-dialog" style="display:none">
+<form id="add-tenant-form" method="post" class="mws-form" action='{% url "addtenant" %}'>
+    {% csrf_token %}
+    
+            <div class="mws-form-row">
+                <label class="mws-form-label">姓名</label>
+                <div class="mws-form-item large">
+                    <input type="text" id='name' name='name' style="width:120px;"/>
+                        <div class="error-messages">
+                        </div>
+                </div>
+            </div>
+            
+            <div class="mws-form-row">
+                <label class="mws-form-label">性别</label>
+                <div class="mws-form-item large">
+                    <div id='sex'>
+                        <input type="radio" id='sex0' name='sex' value='0'/><label for='sex0'>男</label>
+                        <input type="radio" id='sex1' name='sex' value='1'/><label for='sex1'>女</label>
+                    </div>
+                        <div class="error-messages">
+                        </div>
+                </div>
+            </div>
+            
+            <div class="mws-form-row">
+                <label class="mws-form-label">手机号码</label>
+                <div class="mws-form-item large">
+                    <input type="text" id='mobileNumber' name='mobileNumber' style="width:120px;"/>
+                    <div class="error-messages">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mws-form-row">
+                <label class="mws-form-label">小区</label>
+                <div class="mws-form-item large">
+                     <input type="text" id='community' name='community' style="width:250px;"/>
+                    <div class="error-messages">
+                    </div>
+                </div>
+            </div>
+            
+           <div class="mws-form-row">
+                <label class="mws-form-label">单元</label>
+                <div class="mws-form-item large">
+                    <input type="text" id='unit' name='unit' style="width:250px;"/>
+                    <div class="error-messages">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mws-form-row">
+                <label class="mws-form-label">房号</label>
+                <div class="mws-form-item large">
+                     <input type="text" id='houseNumber' name='houseNumber' style="width:250px;"/>
+                    <div class="error-messages">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mws-form-row">
+                <label class="mws-form-label">租金</label>
+                <div class="mws-form-item large">
+                    <input type="text" id='rentMoney' name='rentMoney' style="width:120px;"/>
+                    <div class="error-messages">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mws-form-row">
+                <label class="mws-form-label">入住日期</label>
+                <div class="mws-form-item large">
+                    <input type="text" name='rentDate' id='rentDate' style="width:120px;"  class="mws-datepicker"/>
+                        <div class="error-messages">
+                        </div>
+                </div>
+            </div>
+            
+            <div class="mws-form-row">
+                <label class="mws-form-label">提醒日期</label>
+                <div class="mws-form-item large">
+                    <input type="text" id='remindDate' name='remindDate' style="width:120px;"   class="mws-datepicker"/>
+                        <div class="error-messages">
+                        </div>
+                </div>
+            </div>
+            
+            
+        </div>
+    </form>
+</div>

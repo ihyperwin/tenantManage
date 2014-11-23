@@ -1,0 +1,51 @@
+<div id="edit-tenant-dialog" style="display:none">
+<form id="edit-tenant-form" method="post" class="mws-form" action='{% url "edittenant" %}'>
+    {% csrf_token %}
+                <div id="editid" style="display:none">
+                    <input type="text" id='id' name='id'/>
+                </div>
+                
+                
+            <div class="mws-form-row">
+                <label class="mws-form-label">姓名</label>
+                <div class="mws-form-item large">
+                    <input type="text" id='editName' name='editName' style="width:120px;" readonly="true"/>
+                    <div class="error-messages">
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="mws-form-row">
+                <label class="mws-form-label">手机号码</label>
+                <div class="mws-form-item large">
+                    <input type="text" id='editMobileNumber' name='editMobileNumber' style="width:120px;"/>
+                    <div class="error-messages">
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+            <div class="mws-form-row">
+                <label class="mws-form-label">租金</label>
+                <div class="mws-form-item large">
+                    <input type="text" id='editRentMoney' name='editRentMoney' style="width:120px;"/>
+                    <div class="error-messages">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mws-form-row">
+                <label class="mws-form-label">提醒日期</label>
+                <div class="mws-form-item large">
+                    <input type="text" id='editRemindDate' name='editRemindDate' style="width:120px;"   class="mws-datepicker"/>
+                        <div class="error-messages">
+                        </div>
+                </div>
+            </div>
+            
+            
+        </div>
+    </form>
+</div>
